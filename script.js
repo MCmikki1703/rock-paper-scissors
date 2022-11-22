@@ -4,10 +4,25 @@ function getComputerChoice() {
     return random;
 }
 
-console.log(getComputerChoice())
+
 
 function playRound(playerSelection, computerSelection) {
-    // your code here!
+    playerSelection = playerSelection.toUpperCase()
+    if (playerSelection === computerSelection) {
+        return 'Draw';
+    } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
+        return 'You Lose! Paper beats Rock';
+    } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
+        return 'You Win! Rock beats Scissors';
+    } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
+        return 'You Lose! Scissors beats paper'
+    } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
+        return 'You Win! Paper beats Rock';
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
+        return 'You Lose! Rock beats Scissors'
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
+        return 'You Win! Scissors beats Paper'
+    } 
   }
    
   const playerSelection = "rock";
